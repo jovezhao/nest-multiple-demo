@@ -1,0 +1,11 @@
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
+    compile 'io.springfox:springfox-swagger2'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui'
+
+    compile project(":demo-contract")
+    compile project(":demo-context")
+    compile project(":demo-infrastructure")
+}
