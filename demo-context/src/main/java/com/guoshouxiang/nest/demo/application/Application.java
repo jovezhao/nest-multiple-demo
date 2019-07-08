@@ -11,12 +11,11 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 @SpringBootApplication(scanBasePackages = {
-        "com.guoshouxiang.nest.demo.context",
-        "com.guoshouxiang.nest.demo.infrastructure",
-        "com.guoshouxiang.nest.demo.tasks"
+        "com.guoshouxiang.nest.demo.tasks",
+        "com.guoshouxiang.nest.demo.appservice",
+        "com.guoshouxiang.nest.demo.infrastructure"
 })
 @EnableScheduling
-
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

@@ -4,7 +4,9 @@
 
 rootProject.name = 'nest-multiple-demo'
 include 'demo-context'
+include 'demo-appservice'
+include 'demo-appservice-contract'
+include 'demo-domain'
 include 'demo-infrastructure'
-include 'demo-application'
-include 'demo-contract'
+
 

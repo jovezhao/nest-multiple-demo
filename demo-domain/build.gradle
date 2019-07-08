@@ -1,0 +1,5 @@
+dependencies {
+    compile("com.guoshouxiang.nest:nest-spring-boot-starter")
+    compile("com.guoshouxiang.nest:nest-mybatis-pagination-plugin")
+    compile("net.sf.dozer:dozer")
+}

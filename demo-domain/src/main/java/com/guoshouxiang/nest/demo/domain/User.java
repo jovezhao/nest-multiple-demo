@@ -1,4 +1,4 @@
-package com.guoshouxiang.nest.demo.context.domain;
+package com.guoshouxiang.nest.demo.domain;
 
 import com.guoshouxiang.nest.context.model.BaseEntity;
 import com.guoshouxiang.nest.context.model.StringIdentifier;

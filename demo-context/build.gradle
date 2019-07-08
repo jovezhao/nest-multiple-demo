@@ -1,6 +1,11 @@
+
 dependencies {
-    compile("com.guoshouxiang.nest:nest-spring-boot-starter")
-    compile("com.guoshouxiang.nest:nest-mybatis-pagination-plugin")
-    compile("net.sf.dozer:dozer")
-    compile project(":demo-contract")
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
+    compile 'io.springfox:springfox-swagger2'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui'
+
+    compile project(":demo-appservice-contract")
+    compile project(":demo-appservice")
+
 }
