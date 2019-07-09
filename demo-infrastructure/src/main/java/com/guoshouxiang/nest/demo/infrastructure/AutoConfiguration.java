@@ -6,6 +6,7 @@ import org.dozer.Mapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 
@@ -14,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-@MapperScan("com.guoshouxiang.nest.demo.infrastructure.dao")
+@ComponentScan
+@MapperScan("com.guoshouxiang.nest.demo.infrastructure")
 public class AutoConfiguration {
 
     @Bean

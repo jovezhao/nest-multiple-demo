@@ -1,4 +1,4 @@
-package com.guoshouxiang.nest.demo.contract;
+package com.guoshouxiang.nest.demo.appservice.contract;
 
 public class UserDto{
     private String id;

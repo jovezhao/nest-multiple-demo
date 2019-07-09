@@ -1,4 +1,4 @@
-package com.guoshouxiang.nest.demo.appservice;
+package com.guoshouxiang.nest.demo.appservice.impls;
 
 import com.guohuoxiang.nest.mybatis.pagination.PageList;
 import com.guohuoxiang.nest.mybatis.pagination.PageParames;
@@ -7,8 +7,8 @@ import com.guoshouxiang.nest.context.loader.ConstructEntityLoader;
 import com.guoshouxiang.nest.context.loader.EntityLoader;
 import com.guoshouxiang.nest.context.loader.RepositoryEntityLoader;
 import com.guoshouxiang.nest.context.model.StringIdentifier;
-import com.guoshouxiang.nest.demo.contract.UserDto;
-import com.guoshouxiang.nest.demo.contract.UserService;
+import com.guoshouxiang.nest.demo.appservice.contract.UserDto;
+import com.guoshouxiang.nest.demo.appservice.contract.UserService;
 import com.guoshouxiang.nest.demo.domain.User;
 import com.guoshouxiang.nest.demo.domain.queries.UserQuery;
 import com.guoshouxiang.nest.spring.AppService;
@@ -42,8 +42,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserQuery userQuery;
 
-    public PageList<UserDto> query() {
-        PageList<User> list = userQuery.getList(PageParames.create(0,5));
+    public PageList<UserDto> query(int pageIndex,int pageSize) {
+        PageList<User> list = userQuery.getList(PageParames.create(pageIndex,pageSize));
         PageList<UserDto> userDtos = list.mapPageList(p -> beanMapper.map(p, UserDto.class));
         return userDtos;
     }

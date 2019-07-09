@@ -1,32 +1,18 @@
-package com.guoshouxiang.nest.demo.application;
+package com.guoshouxiang.nest.demo.context.api;
 
-
-import com.guoshouxiang.nest.demo.api.v1.ApiConfiguration;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-@SpringBootApplication(scanBasePackages = {
-        "com.guoshouxiang.nest.demo.tasks",
-        "com.guoshouxiang.nest.demo.appservice",
-        "com.guoshouxiang.nest.demo.infrastructure"
-})
-@EnableScheduling
-public class Application {
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-
-
+@Configuration
+public class ApiConfiguration {
     @Bean
     public ServletRegistrationBean V1Registration() {
 
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
-        applicationContext.scan("com.guoshouxiang.nest.demo.api.v1");
+        applicationContext.register(com.guoshouxiang.nest.demo.api.v1.ApiConfiguration.class);
 
         DispatcherServlet dispatcherServlet
                 = new DispatcherServlet(applicationContext);
@@ -42,7 +28,7 @@ public class Application {
     public ServletRegistrationBean V2Registration() {
 
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
-        applicationContext.scan("com.guoshouxiang.nest.demo.api.v2");
+        applicationContext.register(com.guoshouxiang.nest.demo.api.v2.ApiConfiguration.class);
 
         DispatcherServlet dispatcherServlet
                 = new DispatcherServlet(applicationContext);
@@ -53,5 +39,4 @@ public class Application {
 
         return registrationBean;
     }
-
 }

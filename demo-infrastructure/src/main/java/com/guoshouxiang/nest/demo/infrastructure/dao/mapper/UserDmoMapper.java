@@ -11,8 +11,10 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.annotations.UpdateProvider;
 import org.apache.ibatis.type.JdbcType;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface UserDmoMapper {
     @Delete({
         "delete from user",

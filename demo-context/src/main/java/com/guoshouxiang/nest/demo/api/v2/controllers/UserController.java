@@ -1,8 +1,8 @@
 package com.guoshouxiang.nest.demo.api.v2.controllers;
 
 
-import com.guoshouxiang.nest.demo.contract.UserDto;
-import com.guoshouxiang.nest.demo.contract.UserService;
+import com.guoshouxiang.nest.demo.appservice.contract.UserDto;
+import com.guoshouxiang.nest.demo.appservice.contract.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
