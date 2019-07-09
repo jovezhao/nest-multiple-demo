@@ -1,3 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.guoshouxiang.nest.demo.infrastructure.AutoConfiguration,\
-  org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
+  com.guoshouxiang.nest.demo.infrastructure.AutoConfiguration
